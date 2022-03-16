@@ -14,7 +14,7 @@ const EyeCatch = styled.h1`
     line-height: 100%;
 
     @media(min-width: 768px){
-        font-size: 9vw;
+        font-size: 6vw;
     }
 
 `
