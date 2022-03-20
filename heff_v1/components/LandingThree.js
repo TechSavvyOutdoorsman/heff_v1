@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 
-const darkBlueBottom = '/dark-blue-bottom.svg'
+const darkBlueBottom = '/landing3-btm.svg'
 
 
 const LandingThree = () => {
@@ -14,7 +14,7 @@ const LandingThree = () => {
     const Bottom = () => {
         return (
             <Box zIndex={0} pos='relative' display='block'>
-                <Image objectFit='cover' layout='responsive' width={1440} height={358} src={darkBlueBottom} alt='Picture of Dark Blue Swoosh' />
+                <Image objectFit='cover' layout='responsive' width={1440} height={590} src={darkBlueBottom} alt='Picture of Dark Blue Swoosh' />
             </Box>
         )
     }
@@ -22,10 +22,18 @@ const LandingThree = () => {
     return (
         <Box>
             <Flex 
-                minW='100vw'
-                minH='100vh'
+                mt={20}
+                mb={20}
+                p={20}
+                align='center' 
+                justify='center'
             >
+                <Flex>
+                    
+                    <Heading as='h1' fontSize='xl'>Landing Three</Heading>
 
+
+                </Flex>
             </Flex>
             <Bottom />
         </Box>

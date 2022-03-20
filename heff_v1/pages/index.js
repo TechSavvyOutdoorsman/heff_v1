@@ -2,6 +2,8 @@ import Layout from '../components/layouts/Main'
 import Landing from '../components/Landing'
 import LandingTwo from '../components/LandingTwo'
 import LandingThree from '../components/LandingThree'
+import Landingfour from '../components/LandingFour'
+import LandingFour from '../components/LandingFour'
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
       <Landing />
       <LandingTwo />
       <LandingThree />
+      <LandingFour />
     </Layout>
 
   )

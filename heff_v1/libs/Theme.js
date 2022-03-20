@@ -28,6 +28,7 @@ const colors = {
     white: {
         100: '#FCFCFC',
         200: '#F1F1F1',
+        300: '#E2E2E2'
     },
     black: {
         800: '#5E5E5E',
