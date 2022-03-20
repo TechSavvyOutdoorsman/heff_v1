@@ -15,7 +15,7 @@ const bgSvg = '/landing_bg_5.svg'
 const LandingImg = () => {
     return (
         <Box zIndex={0} >
-            <Image objectFit='cover' layout='fill' src={bgSvg} alt='SVG background Image' priority/>
+            <Image objectFit='contain' layout='fill' src={bgSvg} alt='SVG background Image' priority/>
         </Box>
     )
 }
