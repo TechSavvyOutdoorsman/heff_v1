@@ -4,8 +4,16 @@ import {
     Box, 
     Flex
 } from '@chakra-ui/react'
+import Image from 'next/image'
 
-const yellowBlob = '/yellow_blob.svg'
+const AuthorImg = ({ pic }) => {
+
+    return (
+        <Box zIndex={0} pos='absolute' bottom='-5' right='-5' overflow='hidden' maxW='110px' borderRadius='100%' maxH='110px' display='block' >
+            <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
+        </Box>
+    )
+}
 
 const HeroCard = ({ quote, author, jobTitle, pic }) => {
 
@@ -31,6 +39,7 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
                 <Heading fontSize={{ base: '1.3rem', md: '1.5rem'}} as='h4' color='black.900'>{author}</Heading>
                 <Text lineHeight={{ base: '1.2rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='black.900'>{jobTitle}</Text>
             </Flex>
+                <AuthorImg pic={pic} alt='Picture of Quote Author' />
         </Flex>
 
     )

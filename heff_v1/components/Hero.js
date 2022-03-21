@@ -25,6 +25,7 @@ const HeroText = ({ highlight, header }) => {
 const Hero = ({ author, jobTitle, quote, pic }) => {
 
 const yellowBlob = '/yellow_blob.svg'
+const eyeCatch = '/sq-silver.jpg'
 
 
     return (
@@ -39,7 +40,7 @@ const yellowBlob = '/yellow_blob.svg'
         gap={{ base: '1.5rem', md: '5rem'}} 
         >
             <HeroText highlight={'SERVICE'} header={'Nothing Beats Our Customer Service'} />
-            <HeroCard author={author} jobTitle={jobTitle} quote={quote} pic={pic} />
+            <HeroCard author={author} jobTitle={jobTitle} quote={quote} pic={eyeCatch}  />
         </Flex>
     )
 }
