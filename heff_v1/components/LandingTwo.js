@@ -41,7 +41,7 @@ const LandingTwo = () => {
                     <Flex
                     pt='3rem'
                     pb='3rem'
-                    bg='#497E9A'
+                    bg='blue.500'
                     align='center'
                     justify='center'
                     flexDir='column'

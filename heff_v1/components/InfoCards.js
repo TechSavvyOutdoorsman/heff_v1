@@ -35,7 +35,7 @@ const WholeCard = ({ children, svg, heading, svgAlt, svgW, svgH, listHeading }) 
             
             return (
                 <Flex pl={4} pr={4} pt={2} w='100%' flexDir={{ base: 'row', md: 'column'}} gap={{ base: '1rem'}}>
-                    <Flex maxW={{ base: '150px', md: '250px'}} w={{ base: '100%', md: '250px'}} h={{ base: '100%', md: '250px'}} bg='blue.500' borderRadius='25px'  p={{ base: '1.5rem', md: '2rem'}} align='center' justify='center' flexDir='column' >
+                    <Flex maxW={{ base: '150px', md: '250px'}} w={{ base: '100%', md: '250px'}} h={{ base: '100%', md: '250px'}} bg='blue.400' borderRadius='25px'  p={{ base: '1.5rem', md: '2rem'}} align='center' justify='center' flexDir='column' >
                         <Box p={{ base: '.5rem', md: '2rem'}} w='100%' h='100%' pos='relative' display='block'>
                             <Image objectFit='cover' layout='responsive' width={svgW} height={svgH} src={svg} alt={svgAlt} />
                         </Box>
