@@ -9,7 +9,11 @@ import Image from 'next/image'
 const AuthorImg = ({ pic }) => {
 
     return (
-        <Box zIndex={0} pos='absolute' bottom='-5' right='-5' overflow='hidden' maxW='110px' borderRadius='100%' maxH='110px' display='block' >
+        <Box bg={'rgba(252, 252, 252, 1)'} zIndex={0} pos='absolute' bottom='-5' right='-5' overflow='hidden' maxW='110px' borderRadius='100%' maxH='110px' display='block' sx={{
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+            backdropFilter: 'blur(7.6px)',
+            WebkitBackdropFilter: 'blur(7.6px)', 
+        }}>
             <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
         </Box>
     )
