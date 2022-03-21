@@ -9,11 +9,22 @@ import Image from 'next/image'
 const AuthorImg = ({ pic }) => {
 
     return (
-        <Box bg={'rgba(252, 252, 252, 1)'} zIndex={0} pos='absolute' bottom='-5' right='-5' overflow='hidden' maxW='110px' borderRadius='100%' maxH='110px' display='block' sx={{
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-            backdropFilter: 'blur(7.6px)',
-            WebkitBackdropFilter: 'blur(7.6px)', 
-        }}>
+        <Box 
+            bg={'rgba(252, 252, 252, 1)'} zIndex={0} 
+            pos='absolute' 
+            bottom='-5' 
+            right='-5' 
+            overflow='hidden' 
+            maxW='110px' 
+            borderRadius='full' 
+            maxH='110px' 
+            display={{ base: 'none', md: 'block' }}
+            sx={{
+                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                backdropFilter: 'blur(7.6px)',
+                WebkitBackdropFilter: 'blur(7.6px)', 
+            }}
+        >
             <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
         </Box>
     )
@@ -26,7 +37,6 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
         flexDir='column' 
         p={12} 
         gap={8} 
-        
         maxW='370px'
         sx={{
             background: 'rgba(252, 252, 252, 1)',
@@ -36,6 +46,7 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
             boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
             backdropFilter: 'blur(7.6px)',
             WebkitBackdropFilter: 'blur(7.6px)',
+
         }}
         >
             <Text fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' >{quote}</Text>
