@@ -15,7 +15,7 @@ const CheckMark = ({ children }) => {
     return (
      <Flex align={{ base: 'start', md: 'start'}}  justify='start' gap={2}>
             <CheckIcon mt='.4rem' color='green.500' /> 
-            <Text lineHeight={{ base: '1.2rem', md: '1.5rem'}} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
+            <Text lineHeight={{ base: '1rem', md: '1.5rem'}} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
         </Flex>
     )
 }
@@ -24,7 +24,7 @@ const CardDesc = ({ children }) => {
 
     return (
         <Flex align='center'>
-            <Text lineHeight={{ base: '1.2rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
+            <Text lineHeight={{ base: '1rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
         </Flex>
     )
 }
@@ -42,7 +42,7 @@ const WholeCard = ({ children, svg, heading, svgAlt, svgW, svgH, listHeading }) 
                         <Heading display={{ base: 'none', md: 'contents'}} as='h3' fontSize={{ base: '24px', md: '32px' }} color='white.100'>{heading}</Heading>
                     </Flex>
                     <Flex w={{ base: '100%', md: '240px'}} pr={3} pl={3} gap={{ base: '.5rem', md: '1rem'}} mt={2} flexDir='column'>
-                        <Heading display={{ base: 'contents', md: 'none'}} fontSize={{ base: '1.3rem', md: '1.5rem'}} as='h4' color='white.100'>{listHeading}</Heading>
+                        <Heading display={{ base: 'contents', md: 'none'}} fontSize={{ base: '1.2rem', md: '1.5rem'}} as='h4' color='white.100'>{listHeading}</Heading>
                         {children}
                     </Flex>
                 </Flex>
