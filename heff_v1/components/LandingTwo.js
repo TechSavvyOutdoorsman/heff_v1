@@ -11,13 +11,13 @@ import Image from 'next/image'
 import Header from './Header'
 import InfoCards from './InfoCards'
 
-const blueTop = '/blue_sec_top.svg'
+const blueTop = '/blue2-top.svg'
 const blueBottom = '/blue-bottom.svg'
 
 const Top = () => {
     return (
         <Box zIndex={0} pos='relative' display='block'>
-            <Image objectFit='cover' layout='responsive' width={1440.01} height={358.2} src={blueTop} alt='Top of Blue Background' />
+            <Image objectFit='cover' layout='responsive' width={1440} height={360} src={blueTop} alt='Top of Blue Background' />
         </Box>
     )
 }
