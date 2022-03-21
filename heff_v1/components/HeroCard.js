@@ -10,7 +10,8 @@ const AuthorImg = ({ pic }) => {
 
     return (
         <Box 
-            bg={'rgba(252, 252, 252, 1)'} zIndex={0} 
+            bg={'rgba(252, 252, 252, 1)'} 
+            zIndex={0} 
             pos='absolute' 
             bottom='-5' 
             right='-5' 
@@ -30,6 +31,25 @@ const AuthorImg = ({ pic }) => {
     )
 }
 
+const MobileAuthorImg = ({ pic }) => {
+
+    return (
+        <Box 
+        bg={'rgba(252, 252, 252, 1)'} 
+        zIndex={0} 
+        overflow='hidden' 
+        maxW='75px' 
+        maxH='75px'
+        borderWidth='3px'
+        borderColor='black.900' 
+        borderRadius='full' 
+        display={{ base: 'block', md: 'none' }}
+
+    >
+        <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
+    </Box>
+    )
+}
 const HeroCard = ({ quote, author, jobTitle, pic }) => {
 
     return (
@@ -50,11 +70,14 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
         }}
         >
             <Text fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' >{quote}</Text>
-            <Flex flexDir='column'>
-                <Heading fontSize={{ base: '1.3rem', md: '1.5rem'}} as='h4' color='black.900'>{author}</Heading>
-                <Text lineHeight={{ base: '1.2rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='black.900'>{jobTitle}</Text>
+            <Flex justify='space-between' align='center'>
+                <Flex flexDir='column'>
+                    <Heading fontSize={{ base: '1.3rem', md: '1.5rem'}} as='h4' color='black.900'>{author}</Heading>
+                    <Text lineHeight={{ base: '1.2rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='black.900'>{jobTitle}</Text>
+                </Flex>
+                    <AuthorImg pic={pic} alt='Picture of Quote Author' />
+                    <MobileAuthorImg pic={pic} alt='Picture of Quote Author' />
             </Flex>
-                <AuthorImg pic={pic} alt='Picture of Quote Author' />
         </Flex>
 
     )
