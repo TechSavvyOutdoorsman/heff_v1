@@ -16,8 +16,8 @@ const blueBottom = '/blue-bottom.svg'
 
 const Top = () => {
     return (
-        <Box zIndex={0} pos='relative' >
-            <Image objectFit='cover' layout='responsive' width={1438} height={360} src={blueTop} alt='Top of Blue Background' />
+        <Box zIndex={0} pos='relative' display='block' >
+            <Image layout='responsive' width={1440} height={360} src={blueTop} alt='Top of Blue Background' />
         </Box>
     )
 }
@@ -35,7 +35,7 @@ const LandingTwo = () => {
 
 
     return (
-        <Box>
+        <>
             <Top />
                 <Flex zIndex={1} flexDir='column' >
                     <Flex
@@ -52,7 +52,7 @@ const LandingTwo = () => {
                     </Flex>
                 </Flex>
             <Bottom /> 
-        </Box>
+        </>
     )
 }
 
