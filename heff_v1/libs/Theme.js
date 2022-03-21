@@ -11,6 +11,24 @@ const styles = {
     })
 }
 
+const textStyles = {
+    landing: {
+        fontSize: 'clamp(2rem, 2.25rem, 4rem)',
+        fontWeight: 'medium',
+        letterSpacing: '-1%'
+    },
+    landingDesc: {
+        fontSize: 'clamp(.8rem, 1.1rem, 2.25rem)',
+        fontWeight: 'medium',
+        letterSpacing: '-1%'
+    },
+    smallTitle: {
+        fontSize: 'clamp(.45rem, .4rem, 1.5rem)',
+        fontWeight: 'medium',
+        letterSpacing: '-1%',
+    }
+}
+
 const fonts = {
     heading: "'Fredoka'",
     body: "'Fredoka'"
@@ -23,7 +41,12 @@ const colors = {
         600: '#0F7B4F'
     },
     blue: {
+       400: '#497E9A', 
        500: '#204F68' 
+    },
+    heffBlue: {
+        400: '#497E9A',
+        500: '#205F68'
     },
     white: {
         100: '#FCFCFC',
@@ -71,6 +94,7 @@ const Theme = extendTheme({
     fonts,
     colors,
     styles,
+    textStyles,
 
 })
 

@@ -8,6 +8,8 @@ import {
     useColorModeValue, 
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import Header from './Header'
+import InfoCards from './InfoCards'
 
 const blueTop = '/blue_sec_top.svg'
 const blueBottom = '/blue-bottom.svg'
@@ -15,7 +17,7 @@ const blueBottom = '/blue-bottom.svg'
 const Top = () => {
     return (
         <Box zIndex={0} pos='relative' display='block'>
-            <Image objectFit='cover' layout='responsive' width={1440} height={359} src={blueTop} alt='Top of Blue Background' />
+            <Image objectFit='cover' layout='responsive' width={1440} height={356.3} src={blueTop} alt='Top of Blue Background' />
         </Box>
     )
 }
@@ -37,20 +39,16 @@ const LandingTwo = () => {
             <Top />
                 <Flex zIndex={1} flexDir='column' >
                     <Flex
-                    // bgImg={blueTop}
-                    // backgroundRepeat='no-repeat'
-                    // bgPosition='top'
-
-                    minH='100vh'
-                    minW='100vw'
-                    // bg='white.100'
+                    pt='3rem'
+                    pb='3rem'
                     bg='#497E9A'
                     align='center'
                     justify='center'
+                    flexDir='column'
+                    gap='2rem'
                     >
-                        <Flex gap='20px' justify='space-evenly'>
-                            <Heading>heading</Heading>
-                        </Flex>
+                        <Header highlightColor={'green.500'} landingColor={'white.100'}  highlight={'SERVICES'} landing={'Let Us Help  You Out'} />
+                        <InfoCards />
                     </Flex>
                 </Flex>
             <Bottom /> 
