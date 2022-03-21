@@ -5,6 +5,7 @@ import {
 
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import Header from './Header'
 
 const darkBlueBottom = '/grey-bottom.svg'
 
@@ -21,16 +22,13 @@ const LandingFour = () => {
     return (
         <Box>
         <Flex 
-            p={20}
+            pt='3rem'
+            pb='3rem'
             bg='white.300'
             align='center' 
             justify='center'
         >
-            <Flex>
-                
-                <Heading as='h1' fontSize='xl'>Landing Four</Heading>
-
-            </Flex>
+        <Header landing={'What Some Cool People Had To Say'} highlight={'REVIEWS'} highlightColor='blue.500' landingColor='black.900' />
         </Flex>
         <Bottom />
     </Box>

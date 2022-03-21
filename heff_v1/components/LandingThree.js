@@ -5,11 +5,15 @@ import {
 
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import Hero from './Hero'
 
 const darkBlueBottom = '/landing3-btm.svg'
 
+// grab bg svg
+const yellowBlob = '/yellow_blob.svg'
 
 const LandingThree = () => {
+
 
     const Bottom = () => {
         return (
@@ -22,18 +26,13 @@ const LandingThree = () => {
     return (
         <Box>
             <Flex 
-                mt={20}
-                mb={20}
-                p={20}
+               
+                pt='3rem'
+                pb='3rem'
                 align='center' 
                 justify='center'
             >
-                <Flex>
-                    
-                    <Heading as='h1' fontSize='xl'>Landing Three</Heading>
-
-
-                </Flex>
+                <Hero author={'Saul Silverman'} jobTitle={'Drug Dealer'} quote={'Very fast and efficient service. I called and less than an hour later they’re at my door!'} />
             </Flex>
             <Bottom />
         </Box>

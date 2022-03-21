@@ -34,7 +34,7 @@ const Landing = () => {
         overflow='visible'
         >
         <LandingImg />
-            <Flex zIndex={3} w='100%' p='20px' maxW='container.lg' sx={{
+            <Flex zIndex={3} w='100%' p={8} maxW='container.lg' sx={{
                 flexDirection: 'column',
                 justifyContent: 'end',
                 '@media(min-width: 768px)': {
