@@ -26,7 +26,7 @@ const Top = () => {
 const Bottom = () => {
     return (
         <Box zIndex={0} pos='relative'  display='block' >
-            <Image objectFit='cover' layout='responsive' width={1440} height={479} src={blueBottom} alt='Bottom of Blue Background' />
+            <Image objectFit='cover' layout='responsive' width={1440.5} height={479} src={blueBottom} alt='Bottom of Blue Background' />
         </Box>
     )
 }
