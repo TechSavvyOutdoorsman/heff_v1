@@ -13,8 +13,8 @@ import styled from '@emotion/styled'
 const CheckMark = ({ children }) => {
     
     return (
-        <Flex align='center' justify='start' gap={2}>
-            <CheckIcon color='green.500' /> 
+     <Flex align={{ base: 'start', md: 'center'}}  justify='start' gap={2}>
+            <CheckIcon mt={{ base: '.4rem', md: '0'}} color='green.500' /> 
             <Text textStyle='landingDesc' as='p' color='white.100'>{children}</Text>
         </Flex>
     )
