@@ -24,7 +24,7 @@ const CardDesc = ({ children }) => {
 
     return (
         <Flex align='center'>
-            <Text lineHeight={{ base: '1rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
+            <Text lineHeight={{ base: '1.4rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
         </Flex>
     )
 }
