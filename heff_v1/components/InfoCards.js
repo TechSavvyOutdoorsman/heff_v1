@@ -14,7 +14,7 @@ const CheckMark = ({ children }) => {
     
     return (
      <Flex align={{ base: 'start', md: 'start'}}  justify='start' gap={2}>
-            <CheckIcon mt='.4rem' color='green.500' /> 
+            <CheckIcon mt='.2rem' color='green.500' /> 
             <Text lineHeight={{ base: '1rem', md: '1.5rem'}} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='white.100'>{children}</Text>
         </Flex>
     )
