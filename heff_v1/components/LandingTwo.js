@@ -16,8 +16,8 @@ const blueBottom = '/blue-bottom.svg'
 
 const Top = () => {
     return (
-        <Box minW='100%' minH='100%' zIndex={0} pos='relative' display='block' >
-            <Image objectFit='cover' layout='responsive' width={1440} height={311} src={blueTop} alt='Top of Blue Background' />
+        <Box zIndex={0} pos='relative' display='block' >
+            <Image objectFit='cover' layout='responsive' width={1441} height={312} src={blueTop} alt='Top of Blue Background' />
         </Box>
     )
 }
