@@ -12,44 +12,23 @@ const AuthorImg = ({ pic }) => {
         <Box 
             bg={'rgba(252, 252, 252, 1)'} 
             zIndex={0} 
-            pos='absolute' 
-            bottom='-5' 
-            right='-5' 
             overflow='hidden' 
-            maxW='110px' 
+            maxW='80px' 
+            maxH='80px' 
             borderRadius='full' 
-            maxH='110px' 
-            display={{ base: 'none', md: 'block' }}
             sx={{
                 boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
                 backdropFilter: 'blur(7.6px)',
                 WebkitBackdropFilter: 'blur(7.6px)', 
             }}
         >
-            <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
+            <Image width={125} height={125} src={pic} alt='Picture of Quote Author' />
         </Box>
     )
 }
 
-const MobileAuthorImg = ({ pic }) => {
 
-    return (
-        <Box 
-        bg={'rgba(252, 252, 252, 1)'} 
-        zIndex={0} 
-        overflow='hidden' 
-        maxW='75px' 
-        maxH='75px'
-        borderWidth='3px'
-        borderColor='black.900' 
-        borderRadius='full' 
-        display={{ base: 'block', md: 'none' }}
 
-    >
-        <Image width={125} height={125} src={pic} alt='Picture of Dark Blue Swoosh' />
-    </Box>
-    )
-}
 const HeroCard = ({ quote, author, jobTitle, pic }) => {
 
     return (
@@ -76,7 +55,6 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
                     <Text lineHeight={{ base: '1.2rem', md: '1.7rem' }} fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' color='black.900'>{jobTitle}</Text>
                 </Flex>
                     <AuthorImg pic={pic} alt='Picture of Quote Author' />
-                    <MobileAuthorImg pic={pic} alt='Picture of Quote Author' />
             </Flex>
         </Flex>
 
