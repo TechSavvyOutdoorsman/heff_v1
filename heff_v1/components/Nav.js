@@ -4,12 +4,14 @@ import {
     Heading,
     Button,
     useColorModeValue,
+    useColorMode
 } from '@chakra-ui/react'
 
 
 
 
 const Nav = props => {
+    const { colorMode, toggleColorMode } = useColorMode()
     // const { path } = props 
 
     return (
@@ -25,7 +27,7 @@ const Nav = props => {
                 <Heading pl={5} as='h1' fontSize='lg' fontWeight='600'>Heffernan Technologies</Heading>
                 <Box>
                     <Flex pr={5} align='center' gap='20px'>
-                        <Button h='100%' pt={.5} pb={.5} w='100%' maxW='90px' maxH='30px' borderRadius='30px' bg='green.500' color={useColorModeValue('white.100', 'black.900')} _hover={{ bg: useColorModeValue('green.600', 'green.400'), color: useColorModeValue('white.200', 'black.800')}}>Contact</Button>
+                        <Button onClick={toggleColorMode} h='100%' pt={.5} pb={.5} w='100%' maxW='90px' maxH='30px' borderRadius='30px' bg='green.500' color='white.100' _hover={{ bg: useColorModeValue('green.600', 'green.400'), color: useColorModeValue('white.200', 'black.800')}}>Contact</Button>
                     </Flex>
                 </Box>
             </Flex>

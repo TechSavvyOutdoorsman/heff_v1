@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import Header from './Header'
+import Rectangle from './RectCTA'
 
 const darkBlueBottom = '/grey-bottom.svg'
 
@@ -27,8 +28,11 @@ const LandingFour = () => {
             bg='white.300'
             align='center' 
             justify='center'
+            flexDir='column'
+            p={8}
         >
-        <Header landing={'What Some Cool People Had To Say'} highlight={'REVIEWS'} highlightColor='blue.500' landingColor='black.900' />
+            <Header landing={'What Some Cool People Had To Say'} highlight={'REVIEWS'} highlightColor='blue.500' landingColor='black.900' />
+            <Rectangle />
         </Flex>
         <Bottom />
     </Box>

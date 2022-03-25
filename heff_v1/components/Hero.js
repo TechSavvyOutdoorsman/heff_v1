@@ -13,7 +13,7 @@ const HeroText = ({ highlight, header }) => {
     return (
         <Flex maxW='400px' p={16} flexDir='column' >
             <Heading as='h4' color='blue.500' fontSize={{ base: '14px', md: '20px' }}>{highlight}</Heading>
-            <Heading as='h2' color='black.900'  textStyle='landing'>{header}</Heading>
+            <Heading as='h2' color={useColorModeValue('black.900', 'white.100')}  textStyle='landing'>{header}</Heading>
             <Button h='100%' mt={4} pt={2} pb={2} maxH='30px' maxW='90px' borderRadius='30px' bg='green.500' color={useColorModeValue('white.100', 'black.900')} _hover={{ bg: useColorModeValue('green.600', 'green.400'), color: useColorModeValue('white.200', 'black.800')}}>Contact</Button>
 
         </Flex>

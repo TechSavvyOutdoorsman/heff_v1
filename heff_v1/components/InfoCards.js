@@ -61,10 +61,12 @@ const InfoCards = () => {
             <WholeCard svg={firstCardSvg} svgW={132} svgH={126} svgAlt={'Animated Graphic of Wrenches'} heading={'Repair'} listHeading={'Repair'}>
                 <CheckMark>iPhones & Androids</CheckMark>
                 <CheckMark>Huawei & other Spyware</CheckMark>
+                <CheckMark>Computers</CheckMark>
             </WholeCard>
             <WholeCard svg={secondCardSvg} svgW={125} svgH={125} svgAlt={'Animaged Graphic of Gears'} heading={'Install'} listHeading={'Install'}>
             <CheckMark>Smart Home Tech</CheckMark>
             <CheckMark>Wifi & Internet</CheckMark>
+            <CheckMark>Televisions</CheckMark>
             </WholeCard>
             <WholeCard svg={thirdCardSvg} svgW={125} svgH={125} svgAlt={'Animaged Graphic of Triangles'} heading={'Support'} listHeading={'Support'}>
             <CardDesc>Sleep safe at night knowing that we have your back, 24/7.</CardDesc>

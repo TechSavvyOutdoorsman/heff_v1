@@ -2,7 +2,8 @@ import {
     Heading, 
     Text, 
     Box, 
-    Flex
+    Flex,
+    useColorModeValue
 } from '@chakra-ui/react'
 import Image from 'next/image'
 
@@ -48,7 +49,7 @@ const HeroCard = ({ quote, author, jobTitle, pic }) => {
 
         }}
         >
-            <Text fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' >{quote}</Text>
+            <Text color='black.900' fontSize={{ base: '1.1rem', md: '1.35rem'}} as='p' >{quote}</Text>
             <Flex justify='space-between' align='center'>
                 <Flex flexDir='column'>
                     <Heading fontSize={{ base: '1.3rem', md: '1.5rem'}} as='h4' color='black.900'>{author}</Heading>
