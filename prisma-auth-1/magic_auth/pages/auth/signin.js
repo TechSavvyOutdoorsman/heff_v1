@@ -19,9 +19,10 @@ import {
     FormHelperText,
 } from '@chakra-ui/react'
 import Layout from '../../components/layout'
+import { prisma } from '.prisma/client'
 
 
-const MagicLinkModal = ({ email = '', isOpen, onClose }) => {
+const MagicLinkModal = ({ email = '', isOpen, onClose, fName }) => {
     
     return (
         <Modal size='full' isOpen={isOpen} onClose={onClose} isCentered> 
@@ -35,7 +36,7 @@ const MagicLinkModal = ({ email = '', isOpen, onClose }) => {
             h='100vh'
             >
                 <Flex h='100%' align='center' justify='center' >
-                    <Heading as='h3' fontSize='large'>We sent the email to <Heading as='h3' fontSize='large' color='blue'>{email}</Heading>. Check your inbox and click the link in the email to login.</Heading>
+                    <Heading as='h3' fontSize='large'>Thanks {fName}. We sent the email to <Heading as='h3' fontSize='large' color='blue'>{email}</Heading>... Check your inbox and click the link in the email to login.</Heading>
                 </Flex>
             </Box>
           </ModalBody>
@@ -49,6 +50,7 @@ const SignIn = () => {
     const router = useRouter()
     const toast = useToast()
     
+    const [name, setUserName] = useState('')
     const [email, setEmail] = useState('')
     const [disabled, setDisabled] = useState(false)
     // const [showModal, setShowModal] = useState(false)
@@ -77,6 +79,8 @@ const SignIn = () => {
         e.preventDefault()
 
         try {
+
+            // let user know that response was sent & is now loading
            toast({
                 title: 'Loading...',
                 // description: "We've created your account for you.",
@@ -84,18 +88,20 @@ const SignIn = () => {
                 duration: 2500,
                 isClosable: true,
             })
-            // toastId = toast.loading('Loading...')
             setDisabled(true)
             // Perform sign in 
             const { error } = await signIn('email', {
                 email,
+                name,
                 redirect: false,
                 callbackUrl: '/', // `${window.location.origin}/auth/confirm-request`
             })
+
             // Something went wrong
             if (error) {
                 throw new Error(error)
             }
+            // show user Modal
             onToggle()
             // setShowModal(true)
             toast({
@@ -134,23 +140,38 @@ const SignIn = () => {
                             gap={4}
                             flexDir='column'
                         >
-                            <FormLabel htmlFor='email'>Email address</FormLabel>
-                            <Input 
-                                id="email"
-                                type="email"
-                                required
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                                placeholder="elon@spacex.com"
-                                disabled={disabled}
-                            />
-                            <FormHelperText>We'll never share your email.</FormHelperText>
-                            <Button onClick={handleSignIn} as='button' type='submit' disabled={disabled}>{disabled ? 'Loading...' : 'Sign in'}</Button>
+                            <Flex flexDir='column'>
+                                <FormLabel htmlFor='text'>User Name</FormLabel>
+                                <Input 
+                                    id="user-name"
+                                    type="text"
+                                    required
+                                    value={name}
+                                    onChange={e => setUserName(e.target.value)}
+                                    placeholder="Elon"
+                                    disabled={disabled}
+                                />
+                            </Flex>
+                
+                            <Flex flexDir='column'>
+                                <FormLabel htmlFor='email'>Email address</FormLabel>
+                                <Input 
+                                    id="email"
+                                    type="email"
+                                    required
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    placeholder="elon@spacex.com"
+                                    disabled={disabled}
+                                />
+                            </Flex>
+                            {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
+                            <Button as='button' type='submit' disabled={disabled}>{disabled ? 'Loading...' : 'Sign in'}</Button>
                         </Flex>
                     </FormControl>
                 </form>
             </Flex>
-            <MagicLinkModal email={email} isOpen={isOpen} onClose={onClose} />
+            <MagicLinkModal fName={name} email={email} isOpen={isOpen} onClose={onClose} />
 
         </Layout>
     )

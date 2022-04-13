@@ -8,9 +8,10 @@ const prisma = new PrismaClient()
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
-  secret: process.env.SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
       signIn: '/auth/signin',
+      newUser: '/auth/new-user'
   },
   providers: [
     EmailProvider({
