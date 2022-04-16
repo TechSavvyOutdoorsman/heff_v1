@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { render } from 'react-dom'
 import { signIn, getSession } from 'next-auth/react'
 import {
     Box,
@@ -36,7 +37,7 @@ const MagicLinkModal = ({ email = '', isOpen, onClose, fName }) => {
             h='100vh'
             >
                 <Flex h='100%' align='center' justify='center' >
-                    <Heading as='h3' fontSize='large'>Thanks {fName}. We sent the email to <Heading as='h3' fontSize='large' color='blue'>{email}</Heading>... Check your inbox and click the link in the email to login.</Heading>
+                    <Heading as='h3' fontSize='large'>We sent the email to <Heading as='h3' fontSize='large' color='blue'>{email}</Heading> Check your inbox and click the link in the email to login.</Heading>
                 </Flex>
             </Box>
           </ModalBody>
@@ -50,7 +51,7 @@ const SignIn = () => {
     const router = useRouter()
     const toast = useToast()
     
-    const [name, setUserName] = useState('')
+    // const [name, setUserName] = useState('')
     const [email, setEmail] = useState('')
     const [disabled, setDisabled] = useState(false)
     // const [showModal, setShowModal] = useState(false)
@@ -140,7 +141,7 @@ const SignIn = () => {
                             gap={4}
                             flexDir='column'
                         >
-                            <Flex flexDir='column'>
+                            {/* <Flex flexDir='column'>
                                 <FormLabel htmlFor='text'>User Name</FormLabel>
                                 <Input 
                                     id="user-name"
@@ -151,7 +152,7 @@ const SignIn = () => {
                                     placeholder="Elon"
                                     disabled={disabled}
                                 />
-                            </Flex>
+                            </Flex> */}
                 
                             <Flex flexDir='column'>
                                 <FormLabel htmlFor='email'>Email address</FormLabel>
@@ -171,7 +172,7 @@ const SignIn = () => {
                     </FormControl>
                 </form>
             </Flex>
-            <MagicLinkModal fName={name} email={email} isOpen={isOpen} onClose={onClose} />
+            <MagicLinkModal email={email} isOpen={isOpen} onClose={onClose} />
 
         </Layout>
     )

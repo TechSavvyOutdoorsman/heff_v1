@@ -39,7 +39,11 @@ model Session {
 
 model User {
   id            String    @id @default(cuid())
-  name          String?
+  firstName     String?
+  lastName      String?
+  userName      String?
+  isAdmin       Boolean? @default(false)
+  phoneNumber   String?
   email         String?   @unique
   emailVerified DateTime?
   image         String?

@@ -23,7 +23,7 @@ const AuthComponent = () => {
         gap={6} 
         p={8}
       >
-        <Heading as='h1' fontSize='x-large'>Signed in as {session.user.name} & {session.user.email}</Heading>
+        <Heading as='h1' fontSize='x-large'>Signed in as {session.user.email}</Heading>
         <Button onClick={() => signOut()}>Sign Out</Button>
       </Flex>
     )
